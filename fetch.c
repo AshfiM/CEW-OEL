@@ -12,7 +12,7 @@ int main () {
         curl_easy_setopt(curl, CURLOPT_URL, "https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London%2CUK/2022-07-15/2022-07-20?unitGroup=metric&key=DR3N4RXUKVG775A3MNTWNEQE8" );
         response = curl_easy_perform(curl);
         if (response != CURLE_OK) {
-            printf(stderr, "request failed %s\n", curl_easy_strerror(response));
+            printf(stderr, "Request failed %s\n", curl_easy_strerror(response));
 
         }else {
             printf(response);
