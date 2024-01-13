@@ -1,0 +1,10 @@
+cc = clang
+CFLAGS=-Wall -lcurl -O2 
+TARGET = myprogram 
+SRC = ./sources/fetch.c ./sources/data.c ./sources/report.c program.c
+#-o program -O2 -Wall -lcurl" 
+all: $(TARGET)
+$(TARGET): $(SRC) 
+	$(cc) $^ -o $@ $(CFLAGS)
+clean:
+	rm -f $(TARGET)
